@@ -1,23 +1,29 @@
 # Quebra de Senha de Arquivos ZIP com Wordlist
 
-Este projeto é um script em Python desenvolvido para quebrar a senha de arquivos ZIP protegidos utilizando uma **wordlist** com senhas comuns. Ideal para fins **educacionais** e para testar a segurança de arquivos ZIP com senhas fracas ou conhecidas.
+Este projeto é um script em Python desenvolvido para quebrar a senha de arquivos ZIP protegidos utilizando uma **wordlist** com senhas comuns. Ideal para fins **educacionais** e para testar a segurança de arquivos ZIP com senhas fracas ou conhecidas. Ela pode ser executada tanto por linha de comando quanto por uma interface gráfica intuitiva feita com Tkinter.
 
 ## 🛠 Funcionalidades
-- **Quebra de senha de arquivos ZIP** utilizando uma lista de senhas (wordlist)
-- **Interface de linha de comando (CLI)** simples para interação com o usuário
-- Exibe o progresso das tentativas no terminal
+- **Quebra de senha de arquivos ZIP** utilizando uma lista de senhas (Wordlist)
+- **Interface gráfica** simples e funcional (Tkinter)
+- **Versão em terminal** com feedback colorido (Via Colorama)
+- **Barra de progresso** para acompanhar a tentativa de quebra (na GUI)
+- Validação de arquivos e tratamento de erros
+- Botão para limpar todos os campos na GUI
+- **Exibe o andamento** das tentativas no terminal e na GUI
 - **Exibição da senha encontrada** assim que o arquivo for extraído com sucesso
 
 ## 💻 Tecnologias Utilizadas
 - [Python 3](https://www.python.org/)
 - **zipfile** – Módulo nativo do Python para manipulação de arquivos ZIP
 - **CLI (Interface de Linha de Comando)** – Interação com o usuário via terminal
+- **GUI (Interface Gráfica)** – Interação com o usuário atráves da interface gráfica
 - **Wordlist** – Lista de senhas comuns utilizadas na quebra de senhas ZIP
 
 ## 🧾 Requisitos
 - Python 3.7 ou superior
-- Arquivo ZIP protegido por senha
+- Arquivo ZIP protegido por senha, certifique-se de que o arquivo realmente está protegido
 - Uma **wordlist** contendo possíveis senhas
+- A eficácia depende da qualidade da wordlist utilizada.
 
 ## 📦 Clonando o Repositório
 
@@ -31,10 +37,15 @@ cd quebra-zip
 ---
 
 ## 🛂 Instalação das Dependências
-Este projeto não possui dependências externas além das bibliotecas padrão do Python.
+Antes de executar, certifique-se de ter os seguintes itens instalados:
 
 **Passo 1:** Instalar o Python
-Se ainda não tiver o Python 3 instalado, baixe e instale-o a partir do site oficial do Python.
+Se ainda não tiver o Python 3 instalado, baixe e instale-o a partir do seguinte link: [Python 3](https://www.python.org/)
+
+**Passo 2:** Instalar o Colorama
+```bash
+pip install colorama
+```
 
 ---
 
@@ -52,12 +63,28 @@ Você será solicitado a fornecer o caminho do arquivo ZIP e o caminho da sua wo
 ```bash
 Caminho do arquivo ZIP: /caminho/do/arquivo.zip
 Caminho da wordlist: /caminho/da/wordlist.txt
+---Iniciando quebra de senha---
 Tentando senha: 12345
 Tentando senha: password123
 Tentando senha: minhaSenha
 ✅ Senha encontrada: minhaSenha
 ```
 
+### Modo Gráfico (GUI)
+Para rodar a interface gráfica, execute o mesmo comando acima adicionando o parâmetro --gui no final:
+```bash
+python zip_craker.py --gui
+```
+
+**Para executar a quebra de senha na interface, siga os seguintes passos:**
+
+1. Selecione o arquivo ZIP
+2. Selecione a wordlist
+3. Clique em "🔓 Quebrar Senha"
+4. Use o botão "🧹 Limpar Campos" para reiniciar os campos
+   
+A barra de progresso e o log de tentativas serão atualizados em tempo real.
+  
 ---
 
 ## ⚠ Aviso Legal
