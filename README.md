@@ -80,8 +80,8 @@ python zip_craker.py --gui
 
 1. Selecione o arquivo ZIP
 2. Selecione a wordlist
-3. Clique em "🔓 Quebrar Senha"
-4. Use o botão "🧹 Limpar Campos" para reiniciar os campos
+3. Clique em "Quebrar Senha"
+4. Use o botão "Limpar Campos" para reiniciar os campos
    
 A barra de progresso e o log de tentativas serão atualizados em tempo real.
   
